@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" spacing="14" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.MenuController">
+   <padding>
+      <Insets bottom="20" left="30" right="30" top="20" />
+   </padding>
+   <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="Qual você deseja executar?" />
+   <Button maxWidth="320" onAction="#abrirAluguel" prefWidth="320" text="1 - Aluguel de carro" />
+   <Button maxWidth="320" onAction="#abrirLogin" prefWidth="320" text="2 - Sistema de Login Simplificado" />
+   <Button maxWidth="320" onAction="#abrirCompra" prefWidth="320" text="3 - Compra com desconto" />
+   <Button maxWidth="320" onAction="#abrirTemperatura" prefWidth="320" text="4 - Temperatura" />
+   <Button maxWidth="320" onAction="#abrirViagem" prefWidth="320" text="5 - Calculadora de viagem" />
+   <Button maxWidth="320" onAction="#abrirMultiplo" prefWidth="320" text="6 - Verificação de Múltiplo" />
+   <Button maxWidth="320" onAction="#abrirCamelo" prefWidth="320" text="7 - Os trinta e cinco camelos" />
+   <Button maxWidth="320" onAction="#abrirImagens" prefWidth="320" text="8 - Classes das imagens (item 2)" />
+</VBox>

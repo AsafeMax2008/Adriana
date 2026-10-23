@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" spacing="12" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.AluguelCarroController">
+   <padding>
+      <Insets bottom="20" left="30" right="30" top="20" />
+   </padding>
+   <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="Aluguel de carro" />
+   <HBox alignment="CENTER_LEFT" spacing="10">
+      <Label minWidth="230" text="Quantidade de dias" />
+      <TextField fx:id="txtDias" prefWidth="170" promptText="ex.: 3" />
+   </HBox>
+   <HBox alignment="CENTER_LEFT" spacing="10">
+      <Label minWidth="230" text="Quilometragem percorrida (km)" />
+      <TextField fx:id="txtKm" prefWidth="170" promptText="ex.: 450" />
+   </HBox>
+   <HBox alignment="CENTER_LEFT" spacing="10">
+      <Label minWidth="230" text="Valor da diária (R$)" />
+      <TextField fx:id="txtDiaria" prefWidth="170" promptText="ex.: 120,00" />
+   </HBox>
+   <HBox alignment="CENTER_LEFT" spacing="10">
+      <Label minWidth="230" text="Limite de km incluso por dia" />
+      <TextField fx:id="txtLimite" prefWidth="170" promptText="ex.: 100" />
+   </HBox>
+   <HBox alignment="CENTER_LEFT" spacing="10">
+      <Label minWidth="230" text="Preço por km excedente (R$)" />
+      <TextField fx:id="txtPrecoExtra" prefWidth="170" promptText="ex.: 8" />
+   </HBox>
+   <HBox alignment="CENTER" spacing="20">
+      <Button onAction="#calcular" prefWidth="150" text="Calcular" />
+      <Button onAction="#voltar" prefWidth="150" text="Voltar" />
+   </HBox>
+   <Label fx:id="lblResultado" style="-fx-font-size: 14;" />
+</VBox>

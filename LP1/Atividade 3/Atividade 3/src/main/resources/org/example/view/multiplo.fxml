@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" spacing="12" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.MultiploController">
+   <padding>
+      <Insets bottom="20" left="30" right="30" top="20" />
+   </padding>
+   <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="Verificação de Múltiplo" />
+   <HBox alignment="CENTER_LEFT" spacing="10">
+      <Label minWidth="230" text="Digite um número" />
+      <TextField fx:id="txtNum1" prefWidth="170" promptText="ex.: 10" />
+   </HBox>
+   <HBox alignment="CENTER_LEFT" spacing="10">
+      <Label minWidth="230" text="Digite outro número" />
+      <TextField fx:id="txtNum2" prefWidth="170" promptText="ex.: 5" />
+   </HBox>
+   <HBox alignment="CENTER" spacing="20">
+      <Button onAction="#verificar" prefWidth="150" text="Verificar" />
+      <Button onAction="#voltar" prefWidth="150" text="Voltar" />
+   </HBox>
+   <Label fx:id="lblResultado" style="-fx-font-size: 14;" />
+</VBox>
