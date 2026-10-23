@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" spacing="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.MascarasAfricanasController">
+   <padding>
+      <Insets bottom="20" left="30" right="30" top="20" />
+   </padding>
+   <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="Classe MascarasAfricanas" />
+   <Label style="-fx-text-fill: #555555;" text="Imagem 3 - Máscaras africanas" />
+   <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS">
+      <VBox alignment="TOP_CENTER" spacing="10">
+         <padding>
+            <Insets bottom="10" left="10" right="10" top="10" />
+         </padding>
+         <Label style="-fx-font-weight: bold; -fx-font-size: 14;" text="Máscara" />
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label minWidth="200" text="Origem da máscara" />
+            <TextField fx:id="txtOrigem" prefWidth="220" text="Congo" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label minWidth="200" text="Material da máscara" />
+            <TextField fx:id="txtMaterial" prefWidth="220" text="Madeira" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label minWidth="200" text="Altura da máscara (cm)" />
+            <TextField fx:id="txtAlturaCm" prefWidth="220" text="45" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button minWidth="200" onAction="#descreverMascara" text="Descrever máscara" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button minWidth="200" onAction="#ehGrande" text="É grande?" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button minWidth="200" onAction="#usarEmCerimonia" text="Usar em cerimônia" />
+            <TextField fx:id="txtUsarEmCerimonia" prefWidth="220" promptText="Cerimônia" text="iniciação" />
+         </HBox>
+         <Separator />
+         <Label style="-fx-font-weight: bold; -fx-font-size: 14;" text="Artesão" />
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label minWidth="200" text="Nome do artesão" />
+            <TextField fx:id="txtNome" prefWidth="220" text="Kwame" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label minWidth="200" text="Aldeia" />
+            <TextField fx:id="txtAldeia" prefWidth="220" text="Kinshasa" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label minWidth="200" text="Anos de ofício" />
+            <TextField fx:id="txtAnosDeOficio" prefWidth="220" text="25" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button minWidth="200" onAction="#esculpir" text="Esculpir máscara" />
+            <TextField fx:id="txtEsculpir" prefWidth="220" promptText="Material" text="madeira" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button minWidth="200" onAction="#ehMestre" text="É mestre?" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button minWidth="200" onAction="#apresentar" text="Apresentar artesão" />
+         </HBox>
+         <Separator />
+         <Label style="-fx-font-weight: bold; -fx-font-size: 14;" text="Exposição" />
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label minWidth="200" text="Título da exposição" />
+            <TextField fx:id="txtTitulo" prefWidth="220" text="Máscaras da África" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label minWidth="200" text="Nº de máscaras" />
+            <TextField fx:id="txtNumeroMascaras" prefWidth="220" text="20" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label minWidth="200" text="Preço do ingresso (R$)" />
+            <TextField fx:id="txtPrecoIngresso" prefWidth="220" text="25" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button minWidth="200" onAction="#adicionarMascaras" text="Adicionar máscaras" />
+            <TextField fx:id="txtAdicionarMascaras" prefWidth="220" promptText="Quantidade a adicionar" text="5" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button minWidth="200" onAction="#calcularReceita" text="Calcular receita" />
+            <TextField fx:id="txtCalcularReceita" prefWidth="220" promptText="Nº de visitantes" text="100" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button minWidth="200" onAction="#descreverExposicao" text="Descrever exposição" />
+         </HBox>
+      </VBox>
+   </ScrollPane>
+   <TextArea fx:id="txtResultado" editable="false" prefHeight="90" wrapText="true" />
+   <Button onAction="#voltar" prefWidth="150" text="Voltar" />
+</VBox>

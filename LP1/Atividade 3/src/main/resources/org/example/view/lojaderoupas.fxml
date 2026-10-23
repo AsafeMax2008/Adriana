@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" spacing="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.LojaDeRoupasController">
+   <padding>
+      <Insets bottom="20" left="30" right="30" top="20" />
+   </padding>
+   <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="Classe LojaDeRoupas" />
+   <Label style="-fx-text-fill: #555555;" text="Imagem 1 - Loja de roupas" />
+   <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS">
+      <VBox alignment="TOP_CENTER" spacing="10">
+         <padding>
+            <Insets bottom="10" left="10" right="10" top="10" />
+         </padding>
+         <Label style="-fx-font-weight: bold; -fx-font-size: 14;" text="Loja" />
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label minWidth="200" text="Nome da loja" />
+            <TextField fx:id="txtNome" prefWidth="220" text="Dorinho's" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label minWidth="200" text="Cidade" />
+            <TextField fx:id="txtCidade" prefWidth="220" text="São José dos Campos" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label minWidth="200" text="Nº de funcionários" />
+            <TextField fx:id="txtFuncionarios" prefWidth="220" text="12" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button minWidth="200" onAction="#anunciarInauguracao" text="Anunciar inauguração" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button minWidth="200" onAction="#contratar" text="Contratar" />
+            <TextField fx:id="txtContratar" prefWidth="220" promptText="Quantidade a contratar" text="3" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button minWidth="200" onAction="#calcularFolha" text="Calcular folha" />
+            <TextField fx:id="txtCalcularFolha" prefWidth="220" promptText="Salário médio (R$)" text="2500" />
+         </HBox>
+         <Separator />
+         <Label style="-fx-font-weight: bold; -fx-font-size: 14;" text="Terno" />
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label minWidth="200" text="Cor do terno" />
+            <TextField fx:id="txtCorTerno" prefWidth="220" text="Azul" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label minWidth="200" text="Tamanho do terno" />
+            <TextField fx:id="txtTamanho" prefWidth="220" text="M" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label minWidth="200" text="Preço do terno (R$)" />
+            <TextField fx:id="txtPreco" prefWidth="220" text="899.90" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button minWidth="200" onAction="#aplicarDesconto" text="Aplicar desconto" />
+            <TextField fx:id="txtAplicarDesconto" prefWidth="220" promptText="Desconto (%)" text="10" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button minWidth="200" onAction="#calcularParcela" text="Calcular parcela" />
+            <TextField fx:id="txtCalcularParcela" prefWidth="220" promptText="Nº de parcelas" text="3" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button minWidth="200" onAction="#descreverTerno" text="Descrever terno" />
+         </HBox>
+         <Separator />
+         <Label style="-fx-font-weight: bold; -fx-font-size: 14;" text="Manequim" />
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label minWidth="200" text="Altura do manequim (cm)" />
+            <TextField fx:id="txtAlturaCm" prefWidth="220" text="185" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label minWidth="200" text="Cor do manequim" />
+            <TextField fx:id="txtCorManequim" prefWidth="220" text="Azul" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label minWidth="200" text="Roupa atual do manequim" />
+            <TextField fx:id="txtRoupa" prefWidth="220" text="Terno azul" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button minWidth="200" onAction="#vestir" text="Vestir" />
+            <TextField fx:id="txtVestir" prefWidth="220" promptText="Nova roupa" text="Camisa polo" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button minWidth="200" onAction="#despir" text="Despir" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button minWidth="200" onAction="#descreverManequim" text="Descrever manequim" />
+         </HBox>
+      </VBox>
+   </ScrollPane>
+   <TextArea fx:id="txtResultado" editable="false" prefHeight="90" wrapText="true" />
+   <Button onAction="#voltar" prefWidth="150" text="Voltar" />
+</VBox>

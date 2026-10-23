@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" spacing="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.PenteadosDeMangaController">
+   <padding>
+      <Insets bottom="20" left="30" right="30" top="20" />
+   </padding>
+   <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="Classe PenteadosDeManga" />
+   <Label style="-fx-text-fill: #555555;" text="Imagem 4 - Penteados de mangá" />
+   <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS">
+      <VBox alignment="TOP_CENTER" spacing="10">
+         <padding>
+            <Insets bottom="10" left="10" right="10" top="10" />
+         </padding>
+         <Label style="-fx-font-weight: bold; -fx-font-size: 14;" text="Penteado" />
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label minWidth="200" text="Nome do penteado" />
+            <TextField fx:id="txtNomePenteado" prefWidth="220" text="Franja curta" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label minWidth="200" text="Comprimento (cm)" />
+            <TextField fx:id="txtComprimentoCm" prefWidth="220" text="12" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label minWidth="200" text="Estilo" />
+            <TextField fx:id="txtEstilo" prefWidth="220" text="Repicado" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button minWidth="200" onAction="#cortar" text="Cortar" />
+            <TextField fx:id="txtCortar" prefWidth="220" promptText="Quanto cortar (cm)" text="3" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button minWidth="200" onAction="#ehCurto" text="É curto?" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button minWidth="200" onAction="#descreverPenteado" text="Descrever penteado" />
+         </HBox>
+         <Separator />
+         <Label style="-fx-font-weight: bold; -fx-font-size: 14;" text="Personagem de mangá" />
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label minWidth="200" text="Nome do personagem" />
+            <TextField fx:id="txtNomePersonagem" prefWidth="220" text="Kenji" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label minWidth="200" text="Idade" />
+            <TextField fx:id="txtIdade" prefWidth="220" text="17" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label minWidth="200" text="Penteado do personagem" />
+            <TextField fx:id="txtPenteado" prefWidth="220" text="Repicado" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button minWidth="200" onAction="#apresentarPersonagem" text="Apresentar personagem" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button minWidth="200" onAction="#mudarPenteado" text="Mudar penteado" />
+            <TextField fx:id="txtMudarPenteado" prefWidth="220" promptText="Novo penteado" text="Ondulado" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button minWidth="200" onAction="#envelhecer" text="Envelhecer" />
+            <TextField fx:id="txtEnvelhecer" prefWidth="220" promptText="Quantos anos" text="2" />
+         </HBox>
+         <Separator />
+         <Label style="-fx-font-weight: bold; -fx-font-size: 14;" text="Desenhista" />
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label minWidth="200" text="Nome do desenhista" />
+            <TextField fx:id="txtNomeDesenhista" prefWidth="220" text="Mika" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label minWidth="200" text="Desenhos feitos" />
+            <TextField fx:id="txtQuantidadeDesenhos" prefWidth="220" text="10" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label minWidth="200" text="Minutos por desenho" />
+            <TextField fx:id="txtMinutosPorDesenho" prefWidth="220" text="45" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button minWidth="200" onAction="#desenhar" text="Desenhar" />
+            <TextField fx:id="txtDesenhar" prefWidth="220" promptText="Quantos desenhos" text="2" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button minWidth="200" onAction="#calcularTempoTotal" text="Calcular tempo total" />
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button minWidth="200" onAction="#apresentarDesenhista" text="Apresentar desenhista" />
+         </HBox>
+      </VBox>
+   </ScrollPane>
+   <TextArea fx:id="txtResultado" editable="false" prefHeight="90" wrapText="true" />
+   <Button onAction="#voltar" prefWidth="150" text="Voltar" />
+</VBox>
